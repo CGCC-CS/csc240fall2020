@@ -13,8 +13,13 @@ void array_to_ptr () {
   printf("\nlength = %d\n", n);
 }
 
-int contains (char * str, char c);
-int * makearray(int n);
+int contains (char * str, char c) {
+  /* To be completed as part of assignment */
+}
+
+int * makearray(int n) {
+  /* To be completed as part of assignment */
+}
 
 int main (void) {
   printf("Question #2 - array_to_ptr:\n");
