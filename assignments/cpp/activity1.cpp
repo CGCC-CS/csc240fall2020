@@ -17,13 +17,13 @@ int main() {
   MyClass x(10);
   MyClass y(11);
 
-  cout << "x: " << endl;
+  cout << "x: " << endl << "  ";
   x.print();
-  cout << x.doubleNum();
+  cout << "  x.doubleNum=" << x.doubleNum() << endl;;
 
-  cout << "y: " << endl;
+  cout << endl << "y: " << endl << "  ";
   y.print();
-  cout << y.doubleNum();
+  cout << "  y.doubleNum=" << x.doubleNum() << endl;;
 
   return 0;
 }
