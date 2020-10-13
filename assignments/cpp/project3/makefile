@@ -1,5 +1,5 @@
 CC=g++ 
-CPPFLAGS=--std=c++11 -Wall -pedantic
+CPPFLAGS=--std=c++17 -Wall -pedantic
 
 all: project3.cpp term.o polynomial.o
 	$(CC) $(CPPFLAGS) project3.cpp term.o polynomial.o -o project3

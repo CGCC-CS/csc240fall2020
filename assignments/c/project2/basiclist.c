@@ -4,7 +4,7 @@
 #include"basiclist.h"
 
 /* To run as a test: 
-    gcc -ansi -pedantic -Wall basiclist.c -DTEST
+    gcc --std=c11 -pedantic -Wall basiclist.c -DTEST
 */
 
 int list_add(node_t ** list, void * data) {
