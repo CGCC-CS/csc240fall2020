@@ -11,9 +11,9 @@ using namespace std;
 #define BUFFERLEN 100
 
 Term term_from_string(char * buff) {
-    int coef;
-    string var;
-    int exp;
+    int coef = 0;
+    string var = "";
+    int exp = 0;
     char * tok = strtok(buff, " ");
     if(tok != NULL) {
         coef=atoi(tok);
