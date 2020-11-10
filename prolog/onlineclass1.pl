@@ -1,9 +1,9 @@
 % coronavirus/4 country  # of cases  # of deaths # of recoveries
-coronavirus(unitedstates,586057,23604,43637).
-coronavirus(spain,170099,17756,64727).
-coronavirus(italy,159516,20465,35435).
-coronavirus(germany,130072,3194,57259).
-coronavirus(france,98076,14967,27718).
+coronavirus(unitedstates,10421956,244448,6552610).
+coronavirus(spain,1426602,39345,1073577).
+coronavirus(italy,960373,41750,345298).
+coronavirus(india,8591075,127104,7957206).
+coronavirus(france,1807479,30793,129735).
 
 %population/2
 population(unitedstates,331002651).
@@ -13,18 +13,28 @@ population(germany,83783942).
 population(france,65273511).
 
 % Rules
-recovery_rate(Country, Rate) :- coronavirus(Country, Cases, _, Recoveries),
+recovery_rate(Country, Rate) :- coronavirus(Country, Cases, _, Recoveries), 
                                 Rate is Recoveries / Cases * 100.
-mortality_rate(Country, Rate) :- coronavirus(Country, Cases, Deaths, _),
-                                Rate is Deaths / Cases * 100.
+mortality_rate(Country, Rate) :- coronavirus(Country, Cases, Deaths, _), 
+                                 Rate is Deaths / Cases * 100.
+covid_percent(Country, Percent) :- coronavirus(Country, Cases, _, _),
+                                   population(Country, Population),
+				   Percent is Cases / Population * 100.
+
+% Rule - increment/2
+increment(X,X1) :- X1 is X + 1.
+
+% Rule - addem
+addem(X,Y,Sum) :- Sum is X + Y.
+
+% Absolute value
+absolute_value(X,Abs) :- X < 0, Abs is X * -1.
+absolute_value(X,X) :- X >= 0.
 
 is_integer(X) :- member(X, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]).
 
 % equation A + B = C
-equation(A, B, C) :-
-                     is_integer(A),
-                     is_integer(B),
-		     C is A + B.
+equation(A, B, C) :- is_integer(A), is_integer(B), C is A + B.
 
-% same_num/2
-same_num(A, A).
+% same
+same(A,A).
