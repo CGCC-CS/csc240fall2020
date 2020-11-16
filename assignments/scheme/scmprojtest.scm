@@ -106,7 +106,7 @@
            (f2 (x poly2)))
         (begin
           (newline)
-          (write "Question 6a: get-poly-fun")(newline)
+          (write "Question 6b: get-poly-fun")(newline)
           (write (x poly1))(newline)
           (write (x poly2))(newline)
           (write (f1 1))(newline)
