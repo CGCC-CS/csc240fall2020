@@ -41,3 +41,5 @@ increment([H|T], [H1|TailInc]) :- H1 is H + 1, increment(T, TailInc).
 multiples_of_n([],_N,[]).
 multiples_of_n([H|T], N, [H|TailMultiples]) :- 0 is H mod N, multiples_of_n(T,N,TailMultiples).
 multiples_of_n([H|T], N, TailMultiples) :- X is H mod N, X > 0, multiples_of_n(T,N,TailMultiples).
+
+clear :- nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl,nl.
